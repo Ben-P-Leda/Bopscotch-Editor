@@ -1,0 +1,67 @@
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+
+using Leda.Core.Game_Objects.Behaviours;
+using Leda.Core.Gamestate_Management;
+
+namespace Leda.Core.Game_Objects.Base_Classes
+{
+    public class DisposableSimpleDrawableObject : ISimpleRenderable, ICameraRelative, ITransformationAnimatable, ISpriteSheetAnimatable
+    {
+        private float _rotation;
+        private SpriteEffects _mirrorEffect;
+
+        public virtual Vector2 WorldPosition { get; set; }
+        public float WorldDepth { get; set; }
+        public virtual Vector2 CameraPosition { get; set; }
+        public int RenderLayer { get; set; }
+        public virtual bool Visible { get; set; }
+
+        public virtual Texture2D Texture { set; private get; }
+        public Rectangle Frame { set; protected get; }
+        public Vector2 Origin { set; protected get; }
+        public virtual float Scale { set; get; }
+        public virtual float Rotation { get { return _rotation; } set { _rotation = (value + MathHelper.TwoPi) % MathHelper.TwoPi; } }
+        public virtual bool Mirror
+        { 
+            get { return (_mirrorEffect == SpriteEffects.FlipHorizontally); }
+            set { if (value) { _mirrorEffect = SpriteEffects.FlipHorizontally; } else { _mirrorEffect = SpriteEffects.None; } } 
+        }
+        public virtual Color Tint { set; get; }
+        public virtual float RenderDepth { set; get; }
+
+        public DisposableSimpleDrawableObject()
+        {
+            Texture = null;
+            Frame = Rectangle.Empty;
+            Origin = Vector2.Zero;
+            Scale = 1.0f;
+            Rotation = 0.0f;
+            Mirror = false;
+            RenderDepth = 0.5f;
+            Tint = Color.White;
+
+            WorldPosition = Vector2.Zero;
+            WorldDepth = 1.0f;
+            CameraPosition = Vector2.Zero;
+            RenderLayer = -1;
+            Visible = false;
+        }
+
+        public virtual void Initialize()
+        {
+        }
+
+        public virtual void Reset()
+        {
+        }
+
+        public virtual void Draw(SpriteBatch spriteBatch)
+        {
+            if ((Texture != null) && (Frame.Width > 0) && (Frame.Height > 0))
+            {
+                spriteBatch.Draw(Texture, (WorldPosition - CameraPosition) / WorldDepth, Frame, Tint, Rotation, Origin, Scale, _mirrorEffect, RenderDepth);
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<assets>
+  <textures>
+    <texture name="pixel" file="Textures\Editor\WhitePixel" />
+    <texture name="arrow" file="Textures\Editor\editor-flag-arrow" />
+    <texture name="background-tutorial" file="Textures\Backgrounds\background-tutorial" />
+    <texture name="background-1" file="Textures\Backgrounds\background-1" />
+    <texture name="background-2" file="Textures\Backgrounds\background-2" />
+    <texture name="background-3" file="Textures\Backgrounds\background-3" />
+    <texture name="background-4" file="Textures\Backgrounds\background-4" />
+    <texture name="background-5" file="Textures\Backgrounds\background-5" />
+    <texture name="background-6" file="Textures\Backgrounds\background-6" />
+    <texture name="background-7" file="Textures\Backgrounds\background-7" />
+    <texture name="background-8" file="Textures\Backgrounds\background-8" />
+    <texture name="block-1" file="Textures\Blocks\Terrain\block-1" />
+    <texture name="block-spring" file="Textures\Blocks\Special\spring" />
+    <texture name="block-spike" file="Textures\Blocks\Special\spike" />
+    <texture name="block-smash-crate" file="Textures\Blocks\Special\smash-crate" />
+    <texture name="block-ice" file="Textures\Blocks\Special\ice" />
+    <texture name="block-bomb" file="Textures\Blocks\Special\bomb" />
+    <texture name="block-obstruction-top-left" file="Textures\Blocks\Obstruction\top-left" />
+    <texture name="block-obstruction-top-right" file="Textures\Blocks\Obstruction\top-right" />
+    <texture name="block-obstruction-single-top" file="Textures\Blocks\Obstruction\single-top" />
+    <texture name="block-obstruction-double-top" file="Textures\Blocks\Obstruction\double-top" />
+    <texture name="block-obstruction-oblong-top" file="Textures\Blocks\Obstruction\oblong-top" />
+    <texture name="block-obstruction-circle-top" file="Textures\Blocks\Obstruction\circle-top" />
+    <texture name="block-obstruction-diamond" file="Textures\Blocks\Obstruction\diamond" />
+    <texture name="candy-1" file="Textures\Candy\candy-1" />
+    <texture name="candy-2" file="Textures\Candy\candy-2" />
+    <texture name="candy-3" file="Textures\Candy\candy-3" />
+    <texture name="candy-4" file="Textures\Candy\candy-4" />
+    <texture name="candy-5" file="Textures\Candy\candy-5" />
+    <texture name="golden-ticket" file="Textures\Collectables\golden-ticket" />
+    <texture name="sign-one-way" file ="Textures\Signs\sign-one-way" />
+    <texture name="sign-speed-1-1" file ="Textures\Signs\sign-speed-1-1" />
+    <texture name="sign-speed-1-2" file ="Textures\Signs\sign-speed-1-2" />
+    <texture name="sign-speed-1-3" file ="Textures\Signs\sign-speed-1-3" />
+    <texture name="sign-speed-1-4" file ="Textures\Signs\sign-speed-1-4" />
+    <texture name="sign-speed-2-2" file ="Textures\Signs\sign-speed-2-2" />
+    <texture name="sign-speed-2-3" file ="Textures\Signs\sign-speed-2-3" />
+    <texture name="sign-speed-2-4" file ="Textures\Signs\sign-speed-2-4" />
+    <texture name="sign-speed-3-3" file ="Textures\Signs\sign-speed-3-3" />
+    <texture name="sign-speed-3-4" file ="Textures\Signs\sign-speed-3-4" />
+    <texture name="sign-speed-4-4" file ="Textures\Signs\sign-speed-4-4" />
+    <texture name="straight-arrow" file ="Textures\Signs\Direction-Arrow-Straight-Editor" />
+    <texture name="down-curved-arrow" file ="Textures\Signs\Direction-Arrow-Curved-Down" />
+    <texture name="up-curved-arrow" file ="Textures\Signs\Direction-Arrow-Curved-Up" />
+    <texture name="flag-goal" file="Textures\Flags\flag-goal" />
+    <texture name="flag-checkpoint" file="Textures\Flags\flag-checkpoint" />
+    <texture name="player" file="Textures\player-for-editor" />
+    <texture name="post" file="Textures\Signs\sign-post-pole" />
+    <texture name="flagpole" file="Textures\Flags\flagpole" />
+    <texture name="enemy-flying-dropper" file="Textures\Enemies\dropper-editor" />
+  </textures>
+</assets>

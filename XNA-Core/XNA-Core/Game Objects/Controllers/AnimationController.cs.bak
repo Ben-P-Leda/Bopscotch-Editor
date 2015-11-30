@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+
+using Leda.Core.Game_Objects.Behaviours;
+
+namespace Leda.Core.Game_Objects.Controllers
+{
+    public class AnimationController
+    {
+        private List<IAnimated> _simpleObjectsToAnimate;
+        private List<ITransformableSprite> _transformableSpritesToAnimate;
+
+        public AnimationController()
+        {
+            _simpleObjectsToAnimate = new List<IAnimated>();
+            _transformableSpritesToAnimate = new List<ITransformableSprite>();
+        }
+
+        public void AddAnimatedObject(IAnimated toAdd)
+        {
+            if (!_simpleObjectsToAnimate.Contains(toAdd)) { _simpleObjectsToAnimate.Add(toAdd); }
+        }
+
+        public void RemoveAnimatedObject(IAnimated toRemove)
+        {
+            if (_simpleObjectsToAnimate.Contains(toRemove)) { _simpleObjectsToAnimate.Remove(toRemove); }
+        }
+
+        public void AddAnimatedObject(ITransformableSprite toAdd)
+        {
+            if (!_transformableSpritesToAnimate.Contains(toAdd)) { _transformableSpritesToAnimate.Add(toAdd); }
+        }
+
+        public void RemoveAnimatedObject(ITransformableSprite toRemove)
+        {
+            if (_transformableSpritesToAnimate.Contains(toRemove)) { _transformableSpritesToAnimate.Remove(toRemove); }
+        }
+
+        public void Update(int millisecondsSinceLastUpdate)
+        {
+            for (int i = 0; i < _simpleObjectsToAnimate.Count; i++) { _simpleObjectsToAnimate[i].AnimationEngine.UpdateAnimation(millisecondsSinceLastUpdate); }
+
+            for (int i = 0; i < _transformableSpritesToAnimate.Count; i++)
+            {
+                if (_transformableSpritesToAnimate[i].SpriteSheetAnimationEngine != null)
+                {
+                    _transformableSpritesToAnimate[i].SpriteSheetAnimationEngine.UpdateAnimation(millisecondsSinceLastUpdate);
+                }
+
+                if (_transformableSpritesToAnimate[i].TransformationAnimationEngine != null)
+                {
+                    _transformableSpritesToAnimate[i].TransformationAnimationEngine.UpdateAnimation(millisecondsSinceLastUpdate);
+                }
+            }
+        }
+    }
+}
