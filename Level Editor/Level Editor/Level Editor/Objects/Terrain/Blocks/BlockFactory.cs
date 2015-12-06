@@ -32,6 +32,9 @@ namespace Level_Editor.Objects.Terrain.Blocks
                 case "block-ice":
                     newBlock = Factory.CreateIceBlock(textureName);
                     break;
+                case "block-bomb":
+                    newBlock = Factory.CreateBombBlock(textureName);
+                    break;
                 default:
                     foreach (string s in TextureManager.Textures.Keys)
                     {
@@ -82,6 +85,9 @@ namespace Level_Editor.Objects.Terrain.Blocks
                     break;
                 case IceBlock.Save_Node_Name:
                     newBlock = Factory.CreateIceBlock(node.Attribute("texture").Value);
+                    break;
+                case BombBlock.Save_Node_Name:
+                    newBlock = Factory.CreateBombBlock(node.Attribute("texture").Value);
                     break;
                 default:
                     newBlock = Factory.CreateBlock(node.Attribute("texture").Value);
@@ -135,6 +141,14 @@ namespace Level_Editor.Objects.Terrain.Blocks
         private IceBlock CreateIceBlock(string textureName)
         {
             IceBlock newBlock = new IceBlock();
+            newBlock.TextureReference = textureName;
+
+            return newBlock;
+        }
+
+        private BombBlock CreateBombBlock(string textureName)
+        {
+            BombBlock newBlock = new BombBlock();
             newBlock.TextureReference = textureName;
 
             return newBlock;

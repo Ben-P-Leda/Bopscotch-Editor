@@ -104,6 +104,7 @@
     <Compile Include="Objects\PositionRestoreMotionEngine.cs" />
     <Compile Include="Objects\Terrain\Blocks\Block.cs" />
     <Compile Include="Objects\Terrain\Blocks\BlockFactory.cs" />
+    <Compile Include="Objects\Terrain\Blocks\BombBlock.cs" />
     <Compile Include="Objects\Terrain\Blocks\IceBlock.cs" />
     <Compile Include="Objects\Terrain\Blocks\ObstructionBlock.cs" />
     <Compile Include="Objects\Terrain\Blocks\SpikeBlock.cs" />
